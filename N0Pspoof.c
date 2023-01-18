@@ -68,7 +68,7 @@ int main() {
 	printf("[+] N0Pspoof is a tool to bypass and evade Portspoof solution \n");
 	printf("[+] By: Zeyad Azima\n");
 	printf("[+] Github: https://github.com/Zeyad-Azima/N0Pspoof\n");
-	
+	printf("\n");
 	printf("[+] Target Behind Portspoof: ");
 	scanf("%255s", host);
 
