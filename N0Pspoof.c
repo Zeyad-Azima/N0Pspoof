@@ -65,7 +65,10 @@ int main() {
    
 	timeout.tv_usec = 0;
 	int scan_type;
-
+	printf("[+] N0Pspoof is a tool to bypass and evade Portspoof solution \n");
+	printf("[+] By: Zeyad Azima\n");
+	printf("[+] Github: https://github.com/Zeyad-Azima/N0Pspoof\n");
+	
 	printf("[+] Target Behind Portspoof: ");
 	scanf("%255s", host);
 
@@ -76,10 +79,15 @@ int main() {
 
 	printf("[+] Choose the scan type: \n 1) TCP \n 2) UDP \n");
 	scanf("%d", &scan_type);
+	printf("\n");
+	
+	
 
 	if (scan_type == 1) {
+		printf("[+] Scan Info:\n[*] Target: %s	[*] Ports Range: %d-%d	[*] Scan Type: TCP\n", host, start_port, end_port);
 	    TCP_scan(host, start_port, end_port, timeout);
 	} else if (scan_type == 2) {
+		printf("[+] Scan Info:\n[*] Target: %s	[*] Ports Range: %d-%d	[*] Scan Type: UDP\n", host, start_port, end_port);
 	    UDP_scan(host, start_port, end_port, timeout);
 	} else {
 	    printf("Invalid scan type\n");
